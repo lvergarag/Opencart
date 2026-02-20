@@ -28,7 +28,6 @@ public class OpenCartSteps {
 
     @Before
     public void setup() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         home = new HomePage(driver);
