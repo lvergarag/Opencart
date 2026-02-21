@@ -37,7 +37,7 @@ public class OpenCartSteps {
     @Given("User navigates to OpenCart homepage")
     public void open_home()  throws InterruptedException{
         Thread.sleep(2000);
-        System.out.println("Given - User clicks on MacBook product");
+        System.out.println("Given - User clicks on Product");
         home.open();
     }
 
@@ -48,16 +48,25 @@ public class OpenCartSteps {
         home.clickMacBook();
     }
 
+    @When("User clicks on iPhone product")
+    public void click_iPhone() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println("When - User clicks on iPhone product");
+        home.clickiPhone();;
+    }
+
     @Then("Product code text should be {string}")
-    public void validate_code(String expected)  {
-        System.out.println("Assert - User clicks on MacBook product");
-        Assert.assertEquals(expected, product.getProductCodeText());
+    public void validate_code(String expectedCode)  {
+        ProductPage productPage = new ProductPage(driver);
+        System.out.println("Assert - User clicks on Producto");
+        String actualCode = productPage.getProductCodeText();
+        Assert.assertEquals(expectedCode, actualCode);
     }
 
     @After
     public void tearDown() throws InterruptedException {
         Thread.sleep(4000);
-        System.out.println("After  - User clicks on MacBook product");
+        System.out.println("After  - User clicks on Product");
         System.out.println(" ");
         System.out.println("After  - Proceso finalizo OK");
         if (driver != null) driver.quit();
