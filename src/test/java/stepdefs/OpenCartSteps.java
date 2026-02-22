@@ -55,6 +55,13 @@ public class OpenCartSteps {
         home.clickiPhone();;
     }
 
+    @When("User clicks on Apple Cinema product")
+    public void click_AppleCinema() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println("When - User clicks on Apple Cinema product");
+        home.clickAppleCimema();;
+    }
+
     @Then("Product code text should be {string}")
     public void validate_code(String expectedCode)  {
         ProductPage productPage = new ProductPage(driver);

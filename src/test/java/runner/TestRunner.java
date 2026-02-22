@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {""}, // Asegúrate de que el nombre coincida exactamente con el paquete
-        plugin = {"pretty"}
+        plugin = {"pretty"} 
 )
 public class TestRunner {
 }

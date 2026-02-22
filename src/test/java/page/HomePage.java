@@ -10,6 +10,7 @@ public class HomePage extends BasePage {
 
     private By macbookLink = By.linkText("MacBook");
     private By iPhoneLink = By.linkText("iPhone");
+    private By AppleCinemaLink = By.partialLinkText("Apple Cinema");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -25,5 +26,9 @@ public class HomePage extends BasePage {
 
     public void clickiPhone() {
             wait.until(ExpectedConditions.elementToBeClickable(iPhoneLink)).click();
+    }
+
+    public void clickAppleCimema() {
+        wait.until(ExpectedConditions.elementToBeClickable(AppleCinemaLink)).click();
     }
 }
