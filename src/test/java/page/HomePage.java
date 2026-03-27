@@ -1,6 +1,4 @@
-
 package page;
-
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,12 +20,11 @@ public class HomePage extends BasePage {
     }
 
     public void clickMacBook() {
-
         wait.until(ExpectedConditions.elementToBeClickable(macbookLink)).click();
     }
 
     public void clickiPhone() {
-            wait.until(ExpectedConditions.elementToBeClickable(iPhoneLink)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(iPhoneLink)).click();
     }
 
     public void clickAppleCinema() {
@@ -36,6 +33,5 @@ public class HomePage extends BasePage {
 
     public void clickCanonEOS5D() {
         wait.until(ExpectedConditions.elementToBeClickable(CanonEOS5DLink)).click();
-
     }
 }

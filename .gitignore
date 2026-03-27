@@ -1,1 +1,16 @@
-/target/
+/.m2/
+
+target/
+*.log
+*.class
+*.tmp
+
+# IDE
+.idea/
+.vscode/
+
+# Drivers
+drivers/
+
+# Reports
+reports/
